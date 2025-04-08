@@ -40,7 +40,7 @@ public class FuncionarioController {
                 .body(Map.of("mensagem", "Funcionario atualizado com sucesso."));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Map<String, Object>> excluir(@PathVariable Long id) {
         funcionarioService.excluir(id);
         return ResponseEntity
